@@ -1,0 +1,48 @@
+@import url("../reset.css");
+
+.slider{
+    position: relative;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+
+  }
+
+#right-arrow{
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+}
+.leftArrow__container{
+    padding: 50px;
+    font-size: 42px;
+    color: #72b693;
+}
+.rightArrow__container{
+    padding: 50px;
+    font-size: 42px;
+    color: #72b693;
+}
+
+#left-arrow{
+    position: absolute;
+    left: 0;
+    font-size: 26px;
+    color: #75b4e2;
+    z-index: 10;
+    cursor: pointer;
+    user-select: none;
+  }
+  .container__image{
+    width: 400px;
+    height: 400px;
+  }
+  .image{
+    width: 100%;
+    border-radius: 10px;
+  }
+  

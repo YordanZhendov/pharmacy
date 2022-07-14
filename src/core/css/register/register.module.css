@@ -1,0 +1,78 @@
+@import url('../reset.css');
+
+.input{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-bottom-right-radius: 250px 100px;
+  border-top-right-radius: 250px 100px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  background-color: white;
+}
+.input:focus{
+  background-color: #e4fff1;
+}
+.register-btn{
+  background: linear-gradient(to bottom right, #205EAC, #ffff);
+  border: 0;
+  border-radius: 12px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  width: 100%;
+}
+
+.register-btn:not([disabled]):hover{
+  box-shadow: 0 0 .25rem #00000080;
+}
+
+/* Avatar image */
+img.avatar {
+  width: 25%;
+  border-radius: 50px;
+}
+p{
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 850px) {
+  img.avatar {
+    width: 18%;
+  }
+}
+@media screen and (max-width: 550px) {
+  img.avatar {
+    width: 20%;
+  }
+}
+.form{
+  width: 40%;
+  margin: 100px auto;
+}
+@media screen and (max-width: 650px) {
+  .form{
+    width: 70%;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 400px) {
+  .form{
+    width: 90%;
+    margin: auto;
+  }
+}
+.title{
+  text-align: center;
+}

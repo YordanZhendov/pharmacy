@@ -1,0 +1,132 @@
+@import url('../reset.css');
+
+.ecart__container{
+    padding: 200px 100px;
+
+}
+.ecart__container__info{
+    display: flex;
+
+
+}
+.ecart__container__products{
+    background-color: white;
+    width: 95%;
+    border-radius: 50px;
+
+    
+    
+    
+}
+.ecart__container__price{
+    background-color: rgb(227, 255, 227);
+    width: 50%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+
+}
+.ecart__container__products .titles{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: gray;
+}
+
+.product_image_container{
+    width: 100px;
+}
+.product_image_container h2{
+    letter-spacing: 1px;
+}
+.product_image_container div{
+    font-weight: 100;
+    font-size: 16px;
+}
+.product_image_container img{
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.ecart__container__products .product .product__price{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    font-size: 21px;
+    margin-bottom: 50px;
+}
+.ecart__container__products .quantity__control{
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+}
+.quantity__control--btn{
+    cursor: pointer;
+}
+
+/* ecart container price */
+.ecart__container__price {
+
+    padding: 50px;
+}
+
+.ecart__container__price .divider{
+    border-bottom: 5px solid black;
+    height: 50px;
+    width: 70%;
+    margin-bottom: 50px;
+}
+.ecart__container__price .price__total{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: gray;
+    margin-bottom: 50px;
+}
+.ecart__container__price .total{
+    font-weight: unset;
+    color: black;
+    font-size: 21px;
+    margin-left: 20px;
+    letter-spacing: 1px;
+}
+.ecart__container__price .terms{
+    color: red;
+}
+.ecart__container__price .checkout{
+    background-color: #0888A4;
+    color: white;
+    text-transform: uppercase;
+    
+    cursor: pointer;
+    padding: 5px 20px;
+
+    border: none;
+    border-radius: 25px;
+
+}
+.ecart__container__price .checkout i{
+    color: white;
+    margin-left: 5px;
+}
+
+.buttonDelete{
+    position: absolute;
+    left: 0;
+    top:0;
+
+    background-color: white;
+    color: red;
+    border: none;
+    border-radius: 30px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.ecart__container__price a{
+    color: white;
+}
+.ecart__container__price a:hover{
+    color: gainsboro;
+}

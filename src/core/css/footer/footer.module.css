@@ -1,0 +1,27 @@
+@import url("../reset.css");
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px;
+    background-image: linear-gradient(white, #c8ffc8);
+
+    color: #074930;
+    font-size: 21px;
+}
+footer a{
+    color: #074930;
+}
+footer ul{
+    line-height: 45px;
+}
+
+footer ul li{
+    margin-left: 20px;
+    border-top: 1px solid #F2F2F2;
+}
+footer .copy{
+    margin-left: 20px;
+    border:none;
+}

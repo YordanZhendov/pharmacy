@@ -1,0 +1,227 @@
+@import url("../reset.css");
+
+
+.ecart__container{
+    padding: 200px;
+
+}
+.ecart__container__info{
+    display: flex;
+
+    box-shadow: -550px 1px 200px #c8ffc8;
+
+}
+.ecart__container__products{
+    background-color: white;
+    width: 95%;
+    border-radius: 50px;
+
+    
+    
+    
+}
+.ecart__container__price{
+    background-color: rgb(227, 255, 227);
+    width: 50%;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+
+
+}
+.ecart__container__products .titles{
+    display: flex;
+    margin: 20px auto;
+    justify-content: space-evenly;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: gray;
+}
+.ecart__container__products .titles span{
+    margin: 0px 0px;
+}
+.ecart__container__products i{
+    margin: 50px;
+    font-size: 26px;
+    font-weight: bold;
+    color: gray;
+    cursor: pointer;
+}
+
+.product_image_container{
+    width: 150px;
+    text-align: center;
+}
+.product_image_container h2{
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: overline;
+    line-height: 30px;
+    color: #c58023;
+    
+}
+.product_image_container div{
+    font-weight: 100;
+    font-size: 16px;
+}
+.toLogin__btn{
+    background-color: #7bbd84;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+    cursor: pointer;
+    padding: 5px 220px;
+    width: 200px;
+
+    border: none;
+    border-radius: 25px;
+}
+.toLogin__btn .linkToLogin{
+    color: white;
+}
+.toLogin__btn:hover{
+    background-color: #37663d;
+    color: white;
+    transform: scale(1.1);
+}
+.product_image_container button{
+    background-color: #7bbd84;
+    color: white;
+    text-transform: uppercase;
+    
+    cursor: pointer;
+    padding: 5px 20px;
+    margin: 10px;
+
+    border: none;
+    border-radius: 25px;
+}
+.product_image_container img{
+    width: 100%;
+    border-radius: 50px;
+    margin-bottom: 10px;
+}
+.ecart__container__products .product .product__price{
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+    font-size: 21px;
+    margin-bottom: 50px;
+}
+.ecart__container__products .quantity__control{
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+}
+.quantity__control--btn{
+    cursor: pointer;
+}
+
+.form__container{
+    border: none;
+    padding: 100px;
+    border-radius: 20px;
+    text-align: center;
+}
+.form__container p{
+    font-size: 65px;
+}
+.form__container .input {
+        width: 50%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-bottom-right-radius: 250px 100px;
+        border-top-right-radius: 250px 100px;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+        background-color: white;
+}
+.add--pharmacy--btn{
+    background: linear-gradient(to bottom right, #205EAC, #ffff);
+    border: 0;
+    border-radius: 12px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 2.5;
+    outline: transparent;
+    padding: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s ease-in-out;
+    width: 50%;
+  }
+  
+  .add--pharmacy--btn:not([disabled]):hover{
+    box-shadow: 0 0 .25rem #00000080;
+  }
+.delete__product__btn{
+    background-color: #f1a09d;
+    color: white;
+    text-transform: uppercase;
+    
+    cursor: pointer;
+    padding: 5px 20px;
+    margin: 10px;
+
+    border: none;
+    border-radius: 25px;
+}
+.update__product__btn{
+    background-color: #19a82c;
+    color: white;
+    text-transform: uppercase;
+    
+    cursor: pointer;
+    padding: 5px 20px;
+    margin: 10px;
+
+    border: none;
+    border-radius: 25px;
+}
+.noProducts{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 42px;
+    padding: 100px;
+    color: #f1a09d;
+}
+.update__container{
+    position: relative;
+    display: none;
+
+}
+.from__update{
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 50%;
+    background-color: #e91e6394;
+    padding: 30px;
+    border-radius: 25px;
+}
+.from__update input{
+    padding: 20px;
+    width: 50%;
+    font-size: 16px
+}
+.name__product_style{
+    font-size: 32px;
+    text-align: center;
+    font-weight: bold;
+    font-style: oblique;
+}
+.span__update{
+    margin: 25px;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.product__id{
+    display: none;
+}
