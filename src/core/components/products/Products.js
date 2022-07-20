@@ -178,7 +178,7 @@ function Products() {
             </section>
             
             <div id="update__form__container" className={styles.update__container}>
-              <from className={styles.from__update}>
+              <form className={styles.from__update}>
                 <div className={styles.product__id} id="product__id__update"></div>
                 <p className={styles.name__product_style} id="name__product"></p>
                 <div>
@@ -189,7 +189,7 @@ function Products() {
                 </div>
                 <br/>
                 <button type="submit" className={styles['add--pharmacy--btn']} onClick={saveChangesOfProductUpdate}>Запази Променте</button>
-              </from>
+              </form>
             </div>
             <section className={styles.product}>
               {products.length !== 0 || products !== null 

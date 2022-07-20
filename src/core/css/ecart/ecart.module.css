@@ -130,3 +130,10 @@
 .ecart__container__price a:hover{
     color: gainsboro;
 }
+.noProducts{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 42px;
+    padding: 100px;
+    color: #f1a09d;
+}

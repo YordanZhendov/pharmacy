@@ -11,12 +11,15 @@ export const ecartSlicer = createSlice(
             state.ecartProducts.push(action.payload)
        },
        removeProductFromEcart: (state,action) => {
-            state.ecartProducts = state.ecartProducts.filter(({productId}) => productId != action.payload)
+            state.ecartProducts = state.ecartProducts.filter(({productId}) => productId !== action.payload)
+       },
+       clearEcart: (state,action) => {
+        state.ecartProducts = [];
        }
 
     }
 
 });
 
-export const {addProductToEcart, removeProductFromEcart} = ecartSlicer.actions;
+export const {addProductToEcart, removeProductFromEcart, clearEcart} = ecartSlicer.actions;
 export default ecartSlicer.reducer;

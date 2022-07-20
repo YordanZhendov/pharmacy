@@ -9,9 +9,6 @@ export async function savePharmacy(data,id){
 export async function saveProduct(id,data){
     return await api.post(barberApp + `/product/add/${id}`,data)
 }
-export async function buyProductsFromEcart(userId,data){
-    return await api.post(barberApp + `/buy/products/${userId}`,data)
-}
 export async function updateProduct(data){
     return await api.put(barberApp + `/update/product`,data)
 }

@@ -5,8 +5,7 @@ import { useSelector,useDispatch } from "react-redux"
 import { removeUserData } from '../../api/util';
 import { useEffect } from 'react';
 import { removeProductFromEcart } from '../../context/Ecart';
-import { buyProductsFromEcart } from '../../api/data';
-
+import {clearEcart} from '../../context/Ecart'
 
 function Ecart() {
   
@@ -45,11 +44,16 @@ function Ecart() {
 
   async function buyProducts(e){
     e.preventDefault();
-    const productsIds = [];
-    for (const pro of productOfUser) {
-      productsIds.push(pro.product.id)
+    
+    if(productOfUser.length !== 0){
+      dispatch(clearEcart())
+      const successPurchase = document.createElement('div',{});
+      successPurchase.innerText = "Поръчката е успешно направена!";
+      successPurchase.style.padding = "15px";
+      successPurchase.style.fontSize = "18px";
+      successPurchase.style.color = "green";
+      document.getElementById('totalSection').appendChild(successPurchase);
     }
-    await buyProductsFromEcart(user.id,productsIds)
   }
 
   return (
@@ -62,6 +66,9 @@ function Ecart() {
               <span>Количество</span>  
               <span>Общо</span>  
             </section>
+            {productOfUser.length === 0 
+            ? <div id="message" className={styles.noProducts}>няма избрани продукти</div>
+            : null}
             {productOfUser !== null 
             ? productOfUser.map(productOfPurchase => 
                 <section key={productOfPurchase.product.id} className={styles.product}>
@@ -85,7 +92,7 @@ function Ecart() {
             : null}
             
           </section>
-          <section className={styles.ecart__container__price}>
+          <section id="totalSection" className={styles.ecart__container__price}>
             <div className={styles.divider}></div>
             <div className={styles.price__total}>Общо в кошницата: <span id="totalSum" className={styles.total}>0.00</span>лв</div>
             <p><input type="checkbox" name="redTerms"/>Съгласявам се! <Link to="/terms-conditios" className={styles.terms}> Условия и разпоредби</Link>.</p>
