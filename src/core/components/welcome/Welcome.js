@@ -4,6 +4,7 @@ import styles from "../../css/welcome/welcome.module.css"
 import ImageSlider from './slider/ImageSlider'
 import {getAllPharms} from '../../context/AllPharms';
 import * as dataApi from '../../api/data'; 
+import video from '../../videos/videoplayback.mp4';
 
 function Welcome() {
     const dispatch = useDispatch();
@@ -24,7 +25,10 @@ function Welcome() {
   return (
     <main>
         <section className={styles.info_container}>
-                <div className={styles.info_background}></div>
+        <div className={styles.info_background}></div>
+                <video className={styles.video} width={"100%"} autoPlay muted loop  >
+                    <source src={video} type="video/mp4"/>
+                </video>.Videos/video1.mp4
                 <article className={styles.info_text_container}>
                     <h1>Добре дошли!</h1>
                     <h1>{user === undefined ? null : <>
