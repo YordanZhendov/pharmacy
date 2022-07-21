@@ -1,10 +1,10 @@
 import styles from '../../css/pharmacies/pharmacies.module.css';
 import { useNavigate, Navigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { removeUserData } from '../../api/util';
 import { getAllProducts } from '../../context/AllProducts';
 import * as dataApi from '../../api/data';
 import { useEffect } from 'react';
+import {getAllPharms} from '../../context/AllPharms';
 
 function Pharmacies() {
 const navigate = useNavigate();
@@ -14,24 +14,19 @@ const allPharms = useSelector((state) => state.allpharms.allPharmsData)
 
 useEffect(() => {
   window.scrollTo(0,0)
+  async function fetchData() {
+    const allPharms =  await dataApi.getAllPharms();
+    dispatch(getAllPharms(allPharms))
+  }
+  fetchData();
 },[])
 
-if(mydata.email === undefined){
-
-  removeUserData(); 
-  return(
-    <Navigate to="/login" replace={true}/>
-  );
-}
-
 async function toProducts(e){
+
   if(mydata.email === undefined){
-    
-    removeUserData(); 
-    return(
-      <Navigate to="/login" replace={true}/>
-    );
+    <Navigate to="/login" replace={true}/>
   }
+  
   const pharmID = e.currentTarget.id;
   const resp = await dataApi.getAllProductsByPharmacyId(pharmID);
   dispatch(getAllProducts(resp))

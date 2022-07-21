@@ -1,15 +1,25 @@
 import { useEffect } from "react"
-import { useSelector} from "react-redux"
+import { useSelector, useDispatch} from "react-redux"
 import styles from "../../css/welcome/welcome.module.css"
 import ImageSlider from './slider/ImageSlider'
+import {getAllPharms} from '../../context/AllPharms';
+import * as dataApi from '../../api/data'; 
 
 function Welcome() {
+    const dispatch = useDispatch();
 
-useEffect(() => {
-    window.scrollTo(0,0)
-},[])
 
-const user = useSelector((state) => state.user.userData)
+    useEffect(() => {
+        window.scrollTo(0,0)
+        async function fetchData() {
+            const allPharms =  await dataApi.getAllPharms();
+            dispatch(getAllPharms(allPharms))
+          }
+          fetchData();
+    },[])
+
+
+    const user = useSelector((state) => state.user.userData)
 
   return (
     <main>

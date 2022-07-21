@@ -5,7 +5,6 @@ import * as dataApi from '../../api/data';
 import {useDispatch} from 'react-redux'
 import { login } from '../../context/User';
 import {getAllPharmacies} from '../../context/Pharmacy';
-import {getAllPharms} from '../../context/AllPharms';
 import { useEffect } from 'react';
 
 export default function Login(){
@@ -30,12 +29,10 @@ export default function Login(){
 
         const dateAfterRegistration =  await api.login(email,password);
         const pharmacies =  await dataApi.getAllPharmaciesByUserId(dateAfterRegistration.id);
-        const allPharms =  await dataApi.getAllPharms();
        
         if(dateAfterRegistration !== undefined){
             dispatch(login(dateAfterRegistration))
             dispatch(getAllPharmacies(pharmacies))
-            dispatch(getAllPharms(allPharms))
             navigate('/')
         }else{
             navigate('/login')

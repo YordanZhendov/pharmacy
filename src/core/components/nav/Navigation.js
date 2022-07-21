@@ -20,6 +20,9 @@ function Navigation() {
                 {user.email === undefined 
                 ? <>
                     <li>
+                        <Link to="/pharmacies">Аптеки</Link>
+                    </li>
+                    <li>
                         <Link to="/register">Регистрация</Link>
                     </li>
                     <li>
