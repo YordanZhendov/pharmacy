@@ -11,7 +11,7 @@ const navigate = useNavigate();
 const dispatch = useDispatch();
 const mydata = useSelector((state) => state.user.userData)
 const allPharms = useSelector((state) => state.allpharms.allPharmsData)
-
+console.log(allPharms)
 useEffect(() => {
   window.scrollTo(0,0)
   async function fetchData() {
@@ -42,7 +42,7 @@ async function toProducts(e){
                 ? allPharms.map(pharmacy => 
                     <article key={pharmacy.id} id={pharmacy.id} onClick={toProducts}>
                       <div className={styles.creator_img_container}>
-                          <img src={pharmacy.pictureUrl} alt="creator_logo"/>
+                          <img src={pharmacy.pictureUrl} alt="https://image.shutterstock.com/image-vector/prohibition-sign-no-photography-260nw-209270626.jpg"/>
                       </div>
                       <section className={styles.article__info}>
                         <div className={styles.name}>{pharmacy.name}</div>

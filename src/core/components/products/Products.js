@@ -171,10 +171,12 @@ function Products() {
           ? <i onClick={updateProductsPage} id="refresh__button" className="fa-solid fa-arrows-rotate"></i>
           : null}
             <section className={styles.titles}>
+            {pharmacyOwnerId !== user.id ? <>
               <span>Продукт</span>  
-              <span>Цена</span>  
               <span>Количество</span>  
               <span>Общо</span>  
+            </> : null}
+              <span>Цена</span>  
             </section>
             
             <div id="update__form__container" className={styles.update__container}>
@@ -207,14 +209,17 @@ function Products() {
                 <div>
                   $ {product.price}
                 </div>
-                <div className={styles.quantity__control}>
-                  <div className={styles["quantity__control--btn"]} onClick={() => removeQuantity(product.price,product.id)}>-</div>
-                  <div className={styles.quantity}>0</div>
-                  <div className={styles["quantity__control--btn"]} onClick={() => addQuantity(product.price,product.id)}>+</div>
-                </div>
-                <div id="total" className={styles.total}>
-                   00.00 лв
-                </div>
+                {pharmacyOwnerId !== user.id ? <>
+                    <div className={styles.quantity__control}>
+                    <div className={styles["quantity__control--btn"]} onClick={() => removeQuantity(product.price,product.id)}>-</div>
+                    <div className={styles.quantity}>0</div>
+                    <div className={styles["quantity__control--btn"]} onClick={() => addQuantity(product.price,product.id)}>+</div>
+                  </div>
+                  <div id="total" className={styles.total}>
+                    00.00 лв
+                  </div>
+                </> : null}
+                
                 {user.id === product.pharmacy.userApp.id 
                 ? <div>
                     <button className={styles.update__product__btn} onClick={() => popUpblock(product.id,product.name, product.price)}>промени</button>

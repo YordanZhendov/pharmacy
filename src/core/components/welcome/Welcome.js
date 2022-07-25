@@ -31,9 +31,9 @@ function Welcome() {
                 </video>.Videos/video1.mp4
                 <article className={styles.info_text_container}>
                     <h1>Добре дошли!</h1>
-                    <h1>{user === undefined ? null : <>
+                    <h2>{user === undefined ? null : <>
                         {user.firstName}  {user.lastName}
-                    </>}</h1>
+                    </>}</h2>
                     <p> Вашият лечебен свят вече вече само на един клик...</p>
                     <p> Използвайки това приложение клиентите могат да <b> следят, правят и организират </b> своите медикаменти.</p>
                 </article>

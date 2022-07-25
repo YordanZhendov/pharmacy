@@ -28,7 +28,7 @@ function Ecart() {
       return
     }
     if(totalSumToPay !== null){
-      totalSumToPay.textContent= String(totalSumOfOrder);
+      totalSumToPay.textContent= String(totalSumOfOrder.toFixed(2));
     }
     
     
