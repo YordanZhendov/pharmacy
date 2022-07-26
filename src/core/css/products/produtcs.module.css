@@ -1,32 +1,8 @@
 @import url("../reset.css");
 
 
-.ecart__container{
-    padding: 200px;
-
-}
 .ecart__container__info{
-    display: flex;
-
-    box-shadow: -550px 1px 200px #c8ffc8;
-
-}
-.ecart__container__products{
-    background-color: white;
-    width: 95%;
-    border-radius: 50px;
-
-    
-    
-    
-}
-.ecart__container__price{
-    background-color: rgb(227, 255, 227);
-    width: 50%;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
-
-
+    padding: 100px 100px;
 }
 .ecart__container__products .titles{
     display: flex;
@@ -64,8 +40,7 @@
     font-size: 16px;
 }
 .toLogin__btn{
-    background-color: #7bbd84;
-    opacity: 0.3;
+    
     color: white;
     text-transform: uppercase;
     font-weight: bold;
@@ -76,17 +51,21 @@
 
     border: none;
     border-radius: 25px;
+    background-color: grey;
+    opacity: 0.4;
 }
 .toLogin__btn .linkToLogin{
     color: white;
 }
 .toLogin__btn:hover{
-    background-color: #37663d;
+    background-color: grey;
+    opacity: 0.4;
     color: white;
     transform: scale(1.1);
 }
 .product_image_container button{
-    background-color: #7bbd84;
+    background-color: grey;
+    opacity: 0.4;
     color: white;
     text-transform: uppercase;
     
@@ -201,7 +180,7 @@
     top: 0;
     left: 10%;
     width: 50%;
-    background-color: #205eace0;
+    background-color: #060a07d4;
     padding: 30px;
     border-radius: 25px;
 }
@@ -229,7 +208,4 @@
 
 .product__id{
     display: none;
-}
-.disabled{
-    background-color: red;
 }

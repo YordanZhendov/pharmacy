@@ -88,7 +88,7 @@ function Myprofile() {
             <section className={styles.creator_info_container}>
                 <article>
                     <div className={styles.creator_img_container}>
-                        <img src="https://image.shutterstock.com/image-photo/stock-photo-head-shot-young-attractive-businessman-in-glasses-standing-in-modern-office-pose-for-camera-250nw-1854697390.jpg" alt="creator_logo"/>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR30SfNCE6e-sM7qSa8Z9CwrktkRgrjbHKyeSh3VyZDrsXLDVW0uHVcjmeki6bBSwQnqWo&usqp=CAU" alt="creator_logo"/>
                     </div>
                     <p className={styles.name}>{mydata.firstName} {mydata.lastName}</p>
                     <p className={styles.creator_info}><i className="fa-solid fa-envelope"></i> {mydata.email}</p>

@@ -44,7 +44,10 @@ function Ecart() {
 
   async function buyProducts(e){
     e.preventDefault();
-    
+    if(!document.getElementById('check__terms').checked){
+      return;
+    };
+   
     if(productOfUser.length !== 0){
       dispatch(clearEcart())
       const successPurchase = document.createElement('div',{});
@@ -77,8 +80,8 @@ function Ecart() {
                       <button className={styles.buttonDelete} onClick={() => dispatch(removeProductFromEcart(productOfPurchase.product.id))}>
                           <i className="fa-solid fa-circle-xmark"></i>
                       </button>                      
-                      <img src="https://img.healthcarepackaging.com/files/base/pmmi/all/image/2017/05/hp_46537_1_copy.png?auto=format%2Ccompress&q=70" alt="..."></img>
-                      <h2>{productOfPurchase.product.name}</h2>
+                      <img src={productOfPurchase.product.pictureUrl} alt="..."></img>
+                      <h2 className={styles.name__product__ecart}>{productOfPurchase.product.name}</h2>
                       <div>#В333449СВ00323с</div>
                     </div>
                     <div className={styles.quantity__control}>
@@ -95,7 +98,9 @@ function Ecart() {
           <section id="totalSection" className={styles.ecart__container__price}>
             <div className={styles.divider}></div>
             <div className={styles.price__total}>Общо в кошницата: <span id="totalSum" className={styles.total}>0.00</span>лв</div>
-            <p><input type="checkbox" name="redTerms"/>Съгласявам се! <Link to="/terms-conditios" className={styles.terms}> Условия и разпоредби</Link>.</p>
+            <p>
+              <input id="check__terms" type="checkbox" name="redTerms" defaultChecked/>Съгласявам се! <Link to="/terms-conditios" className={styles.terms}> Условия и разпоредби</Link>.
+            </p>
             <button className={styles.checkout} onClick={buyProducts}>
               <a href="https://www.paypal.com/us/signin" target="_blank" rel="noreferrer"> 
                   Плащане <i className="fa-solid fa-money-bill-1"></i>

@@ -7,11 +7,12 @@ import { useEffect } from 'react';
 import {getAllPharms} from '../../context/AllPharms';
 
 function Pharmacies() {
+  
 const navigate = useNavigate();
 const dispatch = useDispatch();
 const mydata = useSelector((state) => state.user.userData)
 const allPharms = useSelector((state) => state.allpharms.allPharmsData)
-console.log(allPharms)
+
 useEffect(() => {
   window.scrollTo(0,0)
   async function fetchData() {
@@ -19,6 +20,9 @@ useEffect(() => {
     dispatch(getAllPharms(allPharms))
   }
   fetchData();
+  
+  document.getElementById('pharmacyName').textContent= "избрана Аптека: няма";
+
 },[])
 
 async function toProducts(e){

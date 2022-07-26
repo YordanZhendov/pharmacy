@@ -37,17 +37,16 @@ function Products() {
     for (const pharm of allPharms) {
       if(pharm.id === id){
         pharmacyOwnerId = pharm.userApp.id
-        document.getElementById('pharmacyName').textContent= "избрана Аптека: " + pharm.name;
+        document.getElementById('pharmacyName').textContent= "намирате се в Аптека: " + pharm.name;
 
       }
     }
-
   }
 
-  async function buyProduct(productId){
+  async function buyProduct(productId,e){
     const quantity = document.getElementById(productId).children[2].children[1].textContent;
     const totalPrice = document.getElementById(productId).children[3].textContent.split(" ")[0];
-    
+    console.log('buy')
     if(Number(quantity) === 0){
       return;
     }
@@ -66,31 +65,46 @@ function Products() {
 
     document.getElementById(productId).children[2].children[1].textContent = '0';
     document.getElementById(productId).children[3].textContent = '00.00 лв';
-
-    navigate('/cart')
+    const buyBtn = e.currentTarget.parentElement.parentElement.children[0].children[3];
+    buyBtn.setAttribute('disabled','');
+    buyBtn.style.backgroundColor = "grey";
+    buyBtn.style.opacity = "0.4";
+    // navigate('/cart')
     
   }
 
-  function addQuantity(price,productId){
+  function addQuantity(price,productId,e){
     const quantityElement = document.getElementById(productId).children[2].children[1];
     const quantity = String(Number(quantityElement.textContent) + 1);
     quantityElement.textContent=quantity
 
+    if(Number(quantity) !== 0){
+      const buyBtn = e.currentTarget.parentElement.parentElement.children[0].children[3];
+      buyBtn.removeAttribute('disabled');
+      buyBtn.style.backgroundColor = "green";
+      buyBtn.style.opacity = "1";
+    }
+
     const total = document.getElementById(productId).children[3];
     const totalSum = String((price * Number(quantityElement.textContent)).toFixed(2));
-    total.textContent=totalSum + ' лв';
-    
+    total.textContent=totalSum + ' лв';    
   }
-  function removeQuantity(price,productId){
+  function removeQuantity(price,productId,e){
     const quantityElement = document.getElementById(productId).children[2].children[1];
     if(Number(quantityElement.textContent) === 0){
       return
     }
-    const qu = String(Number(quantityElement.textContent) - 1);
-    quantityElement.textContent=qu
+    const quantity = String(Number(quantityElement.textContent) - 1);
+    quantityElement.textContent=quantity
+    if(Number(quantity) === 0){
+      const buyBtn = e.currentTarget.parentElement.parentElement.children[0].children[3];
+      buyBtn.setAttribute('disabled','');
+      buyBtn.style.backgroundColor = "grey";
+      buyBtn.style.opacity = "0.4";
+    }
     
     const total = document.getElementById(productId).children[3];
-    const totalSum = String(price * Number(quantityElement.textContent));
+    const totalSum = String((price * Number(quantityElement.textContent)).toFixed(2));
     total.textContent=totalSum + ' лв';
   }
 
@@ -202,7 +216,7 @@ function Products() {
                   <img src={product.pictureUrl} alt="..."></img>
                   <div>#{product.id}</div>
                   {pharmacyOwnerId !== user.id 
-                  ? <button className={styles.toLogin__btn} onClick={() => buyProduct(product.id)} disabled>Купи</button>
+                  ? <button id="buy__btn" className={styles.toLogin__btn} onClick={(e) => buyProduct(product.id,e)} >Купи</button>
                   :null
                   }
                 </div>
@@ -211,9 +225,9 @@ function Products() {
                 </div>
                 {pharmacyOwnerId !== user.id ? <>
                     <div className={styles.quantity__control}>
-                    <div className={styles["quantity__control--btn"]} onClick={() => removeQuantity(product.price,product.id)}>-</div>
+                    <div className={styles["quantity__control--btn"]} onClick={(e) => removeQuantity(product.price,product.id,e)}>-</div>
                     <div className={styles.quantity}>0</div>
-                    <div className={styles["quantity__control--btn"]} onClick={() => addQuantity(product.price,product.id)}>+</div>
+                    <div className={styles["quantity__control--btn"]} onClick={(e) => addQuantity(product.price,product.id,e)}>+</div>
                   </div>
                   <div id="total" className={styles.total}>
                     00.00 лв
