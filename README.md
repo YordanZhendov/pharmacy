@@ -1,5 +1,7 @@
 # PHARMACT TRADE PLATFORM
 
+THE APP IS DEPLOYED ON --- HEROKU
+
 Provide freedom to the pharmacies to trade eachother for better price or availability.
 
 ## Pharmacy Project
