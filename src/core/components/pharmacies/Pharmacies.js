@@ -20,8 +20,10 @@ useEffect(() => {
     dispatch(getAllPharms(allPharms))
   }
   fetchData();
-  
-  document.getElementById('pharmacyName').textContent= "избрана Аптека: няма";
+  const pharmName = document.getElementById('pharmacyName');
+  if(pharmName !== null){
+    pharmName.textContent= "избрана Аптека: няма";
+  }
 
 },[])
 

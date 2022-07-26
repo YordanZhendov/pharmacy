@@ -1,7 +1,7 @@
 import styles from '../../css/products/produtcs.module.css';
 import { useSelector,useDispatch } from 'react-redux';
 import * as dataApi from '../../api/data';
-import { Navigate, useNavigate, useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import { getAllProducts } from '../../context/AllProducts';
 import { addProductToEcart } from '../../context/Ecart';
 import { removeUserData } from '../../api/util';
@@ -9,7 +9,6 @@ import { useEffect } from 'react';
 
 function Products() {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
   
   const { id } = useParams();;
   const products = useSelector((state) => state.allproducts.allProductsData)
@@ -46,7 +45,7 @@ function Products() {
   async function buyProduct(productId,e){
     const quantity = document.getElementById(productId).children[2].children[1].textContent;
     const totalPrice = document.getElementById(productId).children[3].textContent.split(" ")[0];
-    console.log('buy')
+
     if(Number(quantity) === 0){
       return;
     }
@@ -63,14 +62,20 @@ function Products() {
       } 
     }
 
+    document.getElementById('popup__product').style.display = 'block';
+    setTimeout(function() {
+      document.getElementById('popup__product').style.display = 'none';
+    }, 1000);
+
+
     document.getElementById(productId).children[2].children[1].textContent = '0';
     document.getElementById(productId).children[3].textContent = '00.00 лв';
     const buyBtn = e.currentTarget.parentElement.parentElement.children[0].children[3];
     buyBtn.setAttribute('disabled','');
     buyBtn.style.backgroundColor = "grey";
     buyBtn.style.opacity = "0.4";
-    // navigate('/cart')
     
+ 
   }
 
   function addQuantity(price,productId,e){
@@ -180,19 +185,20 @@ function Products() {
   return (
     <div>
         <section className={styles.ecart__container__info}>
+          <span id="popup__product" className={styles.popup__product__purchase}> Успешно добавен продукт в кошницата!!!</span>
           <section className={styles.ecart__container__products}>
-          {pharmacyOwnerId === user.id 
+          {pharmacyOwnerId === user.id && products.length !== 0
           ? <i onClick={updateProductsPage} id="refresh__button" className="fa-solid fa-arrows-rotate"></i>
           : null}
+            {products.length !== 0 ? 
             <section className={styles.titles}>
-            {pharmacyOwnerId !== user.id ? <>
-              <span>Продукт</span>  
-              <span>Количество</span>  
-              <span>Общо</span>  
-            </> : null}
-              <span>Цена</span>  
-            </section>
-            
+              {pharmacyOwnerId !== user.id ? <>
+                <span>Продукт</span>  
+                <span>Количество</span>  
+                <span>Общо</span>  
+              </> : null}
+                <span>Цена</span>  
+            </section> : null}
             <div id="update__form__container" className={styles.update__container}>
               <form className={styles.from__update}>
                 <div className={styles.product__id} id="product__id__update"></div>
@@ -221,7 +227,7 @@ function Products() {
                   }
                 </div>
                 <div>
-                  $ {product.price}
+                  {product.price} лв.
                 </div>
                 {pharmacyOwnerId !== user.id ? <>
                     <div className={styles.quantity__control}>

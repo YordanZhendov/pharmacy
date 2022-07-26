@@ -5,9 +5,10 @@ footer{
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 50px;
-    background-image: linear-gradient(#698057, #14052a);
-    color: #F2F2F2;
+    background-image: linear-gradient(#ffffff, #14052a);
+    color: #ffffff;
     font-size: 21px;
+    padding-top: 75px;
 }
 footer a{
     color: rgb(190, 186, 186);

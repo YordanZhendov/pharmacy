@@ -68,9 +68,9 @@ export default function Register(){
 
                     <input className={styles.input} type="text" placeholder="Телефон" name="phoneNumber" id="phoneNumber" required/>
                 
-                    <p>При създаване на акаунта вие се съгласявате с нашите <Link to="/terms-conditios">Условия и разпоредби</Link>.
+                    <p>При създаване на акаунта вие се съгласявате с нашите <Link to="/terms-conditios" className={styles.terms__conditions}>Условия и разпоредби</Link>.
                     <label htmlFor='redTerms'>
-                        <input type="checkbox" name="redTerms"/>
+                        <input type="checkbox" name="redTerms" defaultChecked/>
                     </label></p>
                     
                     <button type="submit" className={styles['register-btn']}>Регистрирай се</button>
