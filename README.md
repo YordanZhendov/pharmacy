@@ -1,6 +1,38 @@
-# Getting Started with Create React App
+# PHARMACT TRADE PLATFORM
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+THE APP IS DEPLOYED ON --- HEROKU
+
+Provide freedom to the pharmacies to trade eachother for better price or availability.
+
+## Pharmacy Project
+This is a project, which helps the different pharmacies to trade eachother.
+
+Every pharmacy can upload its own products and purchase products from the other pharmacies.
+
+1. On the Welcome Page (/welcome) - there is the purpose of the application.
+2. On Pharmacies (/pharmacies) - there are all pharmacies, which are in the application.
+3. On Products (/pharmacy/:id/products) - there are all products of the certain pharmacy, that has been chosen before that.
+ 3.1 Product can be added and updated only by the owner of the pharmacy. The owner cannot buy its own products.
+ 3.2 Product can be bought only by other pharmacies.
+4. On Myprofile (/my-profile) every Profile can see its pharmacies and products that are already in the ecart.
+5. On Ecart (/cart) pharmacy can purchase the products that have been purchased.
+6. On Login (/login) A new registed pharmacy can enter the app.
+7. On Register (/register) A new pharmacy can register itself. The are some check of the data that has been added.
+8. Index page is actualy the welcome Page.
+
+## Project Technologies
+
+*** The project is separeted into 4 main Fails: api, components, css, context.
+API -> All requrest and fetches are made here. All endpoints can be found here.
+Components -> All components that are needed to build the interface.
+CSS -> The css of the components.
+Context -> The StoreController with all reducers inside it.
+
+The STORE has been provided to the index.js in order to give acces to all components to it.
+
+1. Redux has been used, in order to have a common store for the whole application.
+2. CSS has been used to make the design better. The css is separeted by module to be better support.
+3. Routing has been use to switch the content between the views.
 
 ## Available Scripts
 
@@ -39,32 +71,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
