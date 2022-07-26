@@ -21,7 +21,7 @@ Every pharmacy can upload its own products and purchase products from the other 
 ## Project Technologies
 
 *** The project is separeted into 4 main Fails: api, components, css, context.
-API -> All requrest and fetches are made here.
+API -> All requrest and fetches are made here. All endpoints can be found here.
 Components -> All components that are needed to build the interface.
 CSS -> The css of the components.
 Context -> The StoreController with all reducers inside it.
