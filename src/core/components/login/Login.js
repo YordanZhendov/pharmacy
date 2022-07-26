@@ -52,7 +52,7 @@ export default function Login(){
             
                     <input autoFocus className={styles.input}  type="text" placeholder="Имейл" name="email" id="email" required/>
 
-                    <input className={styles.input} type="password" placeholder="Парола" name="password" id="password" required/>
+                    <input className={styles.input} type="password" placeholder="Парола" name="password" id="password" required pattern='^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$'/>
 
                     <button type="submit" className={styles['register-btn']}>Влез</button>
                 </div>

@@ -35,17 +35,17 @@
     color: gray;
 }
 
-.product_image_container{
+.product__image__container{
     width: 100px;
 }
-.product_image_container h2{
+.product__image__container h2{
     letter-spacing: 1px;
 }
-.product_image_container div{
+.product__image__container div{
     font-weight: 100;
     font-size: 16px;
 }
-.product_image_container img{
+.product__image__container img{
     width: 100%;
     border-radius: 5px;
     margin-bottom: 10px;

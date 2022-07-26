@@ -60,10 +60,11 @@ export default function Register(){
                     <input className={styles.input}  type="text" placeholder="Фамилия" name="lastName" id="lastName" required/>
                     
                     <input className={styles.input}  type="text" placeholder="Имейл" name="email" id="email" required/>
+                    
+                    <label> Най-малко 8 символа на латиница, най-малко 1 буква и 1 число</label>
+                    <input className={styles.input} type="password" placeholder="Парола" name="password" id="password" required title="Моля спазете по-горе посочения формат." pattern='^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$'/>
 
-                    <input className={styles.input} type="password" placeholder="Парола" name="password" id="password" required/>
-
-                    <input className={styles.input} type="password" placeholder="Повторете паролата" name="password-repeat" id="password-repeat" required/>
+                    <input className={styles.input} type="password" placeholder="Повторете паролата" name="password-repeat" id="password-repeat" required title="Моля спазете по-горе посочения формат." pattern='^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$'/>
 
                     <input className={styles.input} type="text" placeholder="Телефон" name="phoneNumber" id="phoneNumber" required/>
                 

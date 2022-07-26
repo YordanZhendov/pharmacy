@@ -73,7 +73,7 @@ function Ecart() {
             ? productOfUser.map(productOfPurchase => 
                 <section key={productOfPurchase.product.id} className={styles.product}>
                   <section className={styles.product__price}>
-                    <div className={styles.product_image_container}>
+                    <div className={styles.product__image__container}>
                       <button className={styles.buttonDelete} onClick={() => dispatch(removeProductFromEcart(productOfPurchase.product.id))}>
                           <i className="fa-solid fa-circle-xmark"></i>
                       </button>                      
