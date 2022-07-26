@@ -65,10 +65,11 @@
 }
 .toLogin__btn{
     background-color: #7bbd84;
+    opacity: 0.3;
     color: white;
     text-transform: uppercase;
     font-weight: bold;
-    
+        
     cursor: pointer;
     padding: 5px 220px;
     width: 200px;
@@ -228,4 +229,7 @@
 
 .product__id{
     display: none;
+}
+.disabled{
+    background-color: red;
 }

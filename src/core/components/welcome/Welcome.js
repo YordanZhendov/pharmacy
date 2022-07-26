@@ -72,7 +72,7 @@ function Welcome() {
         <section className={styles.about_container}>
             <section className={styles.about_info_container} >
                 <article className={styles.right_info} id="clearfix">
-                    <img src="https://www.creativefabrica.com/wp-content/uploads/2020/07/17/Medicine-Logo-Graphics-4647232-1.jpg" alt=""/>
+                    <img src="https://cdn.dribbble.com/users/1261007/screenshots/15724372/media/bba5769cabb684ef0777187a75cc1e36.png?compress=1&resize=400x300&vertical=top" alt=""/>
                     <p>Лекарството е фармацевтичен, химически по състава си или биологически активен продукт или вещество, водещ до оздравяване. Лекарствата се използват в хуманитарната или ветеринарна медицина, и стоматологията. Науката за лекарствата се нарича фармакология. Те се дозират и предписват от лекари, създават се от фармацевти химици, изготвят се от фармацевти, лекарствата се приготвят при хигенни условия, и продават в аптеки от фармацевти, в някои случаи биват директно давани на пациента или прилагани от лекари според неговите оплаквания.</p></article>
                 <div className={styles.separator}></div>
                 <article className={styles.right_info}>

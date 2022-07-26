@@ -202,7 +202,7 @@ function Products() {
                   <img src={product.pictureUrl} alt="..."></img>
                   <div>#{product.id}</div>
                   {pharmacyOwnerId !== user.id 
-                  ? <button className={styles.toLogin__btn} onClick={() => buyProduct(product.id)}>Купи</button>
+                  ? <button className={styles.toLogin__btn} onClick={() => buyProduct(product.id)} disabled>Купи</button>
                   :null
                   }
                 </div>
