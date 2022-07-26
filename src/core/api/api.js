@@ -2,8 +2,8 @@ import { getUserData, setUserData, removeUserData } from "./util.js";
 
 
 
-const barberApp = 'http://localhost:8081';
-// const barberApp = 'https://barber-management-tool-backend.herokuapp.com';
+// const barberApp = 'http://localhost:8081';
+const barberApp = 'https://pharmacy-be.herokuapp.com';
 
 async function request(url, options){
 

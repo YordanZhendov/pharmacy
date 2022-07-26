@@ -1,7 +1,7 @@
 import * as api from './api.js';
 
-const barberApp = 'http://localhost:8081';
-// const barberApp = 'https://barber-management-tool-backend.herokuapp.com/data';
+// const barberApp = 'http://localhost:8081';
+const barberApp = 'https://pharmacy-be.herokuapp.com';
 
 export async function savePharmacy(data,id){
     return await api.post(barberApp + `/pharmacy/add/${id}`,data)
