@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# PHARMACT TRADE PLATFORM
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Provide freedom to the pharmacies to trade eachother for better price or availability.
 
 ## Pharmacy Project
 This is a project, which helps the different pharmacies to trade eachother.
