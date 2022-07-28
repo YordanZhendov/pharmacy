@@ -137,7 +137,7 @@ function Products() {
     await dataApi.saveProduct(id,data);
     const resp = await dataApi.getAllProductsByPharmacyId(id);
     dispatch(getAllProducts(resp))
-    document.getElementsByTagName('form')[0].reset();
+    document.getElementsByTagName('form')[1].reset();
   }
 
   async function updateProductsPage(e){
