@@ -10,12 +10,17 @@ function Navigation() {
     const user = useSelector((state) => state.user.userData)
 
     useEffect(() => {
-        document.getElementById('menu').style.display = 'none';
+       
+        if(window.screen.width > 1000){
+            document.getElementById('menu__btn').style.display = 'none';
+
+        }else{
+            document.getElementById('menu').style.display = 'none';
+        }
     },[])
 
 
     function showMenu(){
-        console.log('wde')
         if(document.getElementById('menu').style.display === 'none'){
             document.getElementById('menu').style.display = 'block';
         }else{
@@ -30,7 +35,7 @@ function Navigation() {
             <div className={styles.divider}></div>
             <i className="fa-solid fa-staff-aesculapius"></i>
         </div>
-        <i  onClick={showMenu} className="fa-solid fa-bars"></i>
+        <i  onClick={showMenu} id="menu__btn" className="fa-solid fa-bars"></i>
         <nav className={styles.navbar_container}>
             <ul id="menu" className={styles.nav_buttons}>
                 {user.email === undefined 
