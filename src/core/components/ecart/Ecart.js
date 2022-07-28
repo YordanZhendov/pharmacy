@@ -88,7 +88,7 @@ function Ecart() {
                       <div className={styles.quantity}>{productOfPurchase.quantity}</div>
                     </div>
                     <div className={styles.total}>
-                      общо {productOfPurchase.totalPrice} лв
+                      {productOfPurchase.totalPrice} лв
                     </div>
                   </section>
               </section>)
