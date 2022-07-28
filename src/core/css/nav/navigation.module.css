@@ -66,6 +66,9 @@ header i{
 a:hover{
     color: #72b693;
 }
+header :nth-child(2){
+    font-size: 21px;
+}
 
 @media only screen and (max-width: 475px) {
 

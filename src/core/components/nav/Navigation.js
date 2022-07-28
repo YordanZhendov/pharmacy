@@ -2,11 +2,26 @@ import styles from "../../css/nav/navigation.module.css";
 import {Link} from 'react-router-dom';
 import { useSelector, useDispatch } from "react-redux"
 import {logout} from '../../context/User'
+import { useEffect } from "react";
 
 
 function Navigation() {
     const dispatch = useDispatch();
     const user = useSelector((state) => state.user.userData)
+
+    useEffect(() => {
+        document.getElementById('menu').style.display = 'none';
+    },[])
+
+
+    function showMenu(){
+        console.log('wde')
+        if(document.getElementById('menu').style.display === 'none'){
+            document.getElementById('menu').style.display = 'block';
+        }else{
+            document.getElementById('menu').style.display = 'none';
+        }
+    }
 
   return (
     <header>
@@ -15,8 +30,9 @@ function Navigation() {
             <div className={styles.divider}></div>
             <i className="fa-solid fa-staff-aesculapius"></i>
         </div>
+        <i  onClick={showMenu} className="fa-solid fa-bars"></i>
         <nav className={styles.navbar_container}>
-            <ul className={styles.nav_buttons}>
+            <ul id="menu" className={styles.nav_buttons}>
                 {user.email === undefined 
                 ? <>
                     <li>
