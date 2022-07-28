@@ -251,6 +251,11 @@
     main .about_info_container .right_info {
         text-align: center;
     }
+    .about_info_container .left_info,
+    .about_info_container .right_info{
+        padding: 0 20px;
+
+    }
     main .right_info img{
         float: none;
     }
