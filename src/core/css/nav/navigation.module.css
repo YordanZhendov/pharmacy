@@ -67,3 +67,17 @@ a:hover{
     color: #72b693;
 }
 
+@media only screen and (max-width: 475px) {
+
+    header {
+      display: block;
+      margin-bottom: 100px;
+    }
+  
+    nav ul{
+      flex-direction: column;
+    }
+    header div{
+      justify-content: center;
+    }
+};

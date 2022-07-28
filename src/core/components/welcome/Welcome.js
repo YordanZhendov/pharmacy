@@ -25,7 +25,7 @@ function Welcome() {
   return (
     <main>
         <section className={styles.info_container}>
-        <div className={styles.info_background}></div>
+                <div className={styles.info_background}></div>
                 <video className={styles.video} width={"100%"} autoPlay muted loop  >
                     <source src={video} type="video/mp4"/>
                 </video>.Videos/video1.mp4

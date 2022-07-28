@@ -1,9 +1,0 @@
-@media only screen and (max-width: 475px) {
-  header {
-    display: block;
-    margin-bottom: 100px;
-  }
-  .info_background {
-    background-color: white;
-  }
-};
