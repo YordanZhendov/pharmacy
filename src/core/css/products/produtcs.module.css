@@ -220,6 +220,47 @@
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
     width: 15%;
-    position: absolute;
+    position: fixed;
     right: 0;
+    top: 70px;
+    z-index: 20000;
+}
+.total__sum__small__window{
+    display: none;
+}
+@media only screen and (max-width: 1000px) {
+    .form__container{
+        padding: unset;
+    }
+    
+}
+@media only screen and (max-width: 1200px) {
+    .form__container .input{
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 550px) {
+    .product__price{
+        flex-direction: column;
+        text-align: center;
+    }
+    .popup__product__purchase{
+        width: 65%;
+        font-size: 16px;
+    }
+    .total__sum__small__window{
+        display: inline;
+    }
+    .title__table{
+        display: none;
+    }
+    .product_image_container{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 380px) {
+    .popup__product__purchase{
+        width: 70%;
+        font-size: 12px;
+    }
 }

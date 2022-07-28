@@ -51,7 +51,8 @@ export default function Register(){
         <main>
             <form onSubmit={onRegisterSubmit} className={styles.form}>
                 <div className={styles.imgcontainer} >
-                <img src="https://www.infobusiness.bcci.bg/content/image2014/aznewnew.png" alt="Avatar" className={styles.avatar}/>
+                    <img src="https://t4.ftcdn.net/jpg/01/45/75/77/360_F_145757709_8kdxa290srd2CJedUaWowIE9IeJA5sJ4.jpg" alt="Avatar" className={styles.avatar}/>
+                    <span className={styles.enter}> РЕГИСТРАЦИЯ </span>
                 </div>
                 <div className={styles.container}>
                     

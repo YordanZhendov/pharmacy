@@ -8,6 +8,7 @@ import video from '../../videos/videoplayback.mp4';
 
 function Welcome() {
     const dispatch = useDispatch();
+    const user = useSelector((state) => state.user.userData)
 
 
     useEffect(() => {
@@ -17,10 +18,10 @@ function Welcome() {
             dispatch(getAllPharms(allPharms))
           }
           fetchData();
+          if(user.email !== undefined){
+            document.getElementById("name__user").style.display="block";
+          }
     },[])
-
-
-    const user = useSelector((state) => state.user.userData)
 
   return (
     <main>
@@ -31,7 +32,7 @@ function Welcome() {
                 </video>.Videos/video1.mp4
                 <article className={styles.info_text_container}>
                     <h1>Добре дошли!</h1>
-                    <h2>{user === undefined ? null : <>
+                    <h2 id="name__user">{user === undefined ? null : <>
                         {user.firstName}  {user.lastName}
                     </>}</h2>
                     <p> Вашият лечебен свят вече вече само на един клик...</p>
@@ -74,7 +75,7 @@ function Welcome() {
                 <article className={styles.right_info} id="clearfix">
                     <img src="https://cdn.dribbble.com/users/1261007/screenshots/15724372/media/bba5769cabb684ef0777187a75cc1e36.png?compress=1&resize=400x300&vertical=top" alt=""/>
                     <p>Лекарството е фармацевтичен, химически по състава си или биологически активен продукт или вещество, водещ до оздравяване. Лекарствата се използват в хуманитарната или ветеринарна медицина, и стоматологията. Науката за лекарствата се нарича фармакология. Те се дозират и предписват от лекари, създават се от фармацевти химици, изготвят се от фармацевти, лекарствата се приготвят при хигенни условия, и продават в аптеки от фармацевти, в някои случаи биват директно давани на пациента или прилагани от лекари според неговите оплаквания.</p></article>
-                <div className={styles.separator}></div>
+                    <div className={styles.separator}></div>
                 <article className={styles.right_info}>
                     <img src="https://media.istockphoto.com/vectors/blue-and-green-medical-cross-health-vector-id1275720974?k=20&m=1275720974&s=612x612&w=0&h=UTYONlQmk-ku34pq9m0sn-GzxPJVW7NdFQsJibSub9s=" alt=""/>
                     <p>Аптеката (от гръцки: ἀποθήκη – склад) е здравно заведение, в което се извършват следните дейности: съхранение, приготвяне, опаковане, контролиране, даване на консултации, отпускане по лекарско предписание и без лекарско предписание на разрешени за употреба в страната лекарствени продукти, както и хранителни добавки, козметични и санитарно-хигиенни средства.[1]

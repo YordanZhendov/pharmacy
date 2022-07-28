@@ -2,7 +2,7 @@
 
 .form{
   width: 40%;
-  margin: 100px auto;
+  margin: 60px auto;
 }
 .input{
   width: 100%;
@@ -52,6 +52,15 @@ p{
     margin-bottom: 50px;
 }
 
+.title{
+  text-align: center;
+}
+.enter{
+  font-size: 26px;
+  font-weight: bold;
+}
+
+
 @media screen and (max-width: 850px) {
   img.avatar {
     width: 18%;
@@ -66,19 +75,15 @@ p{
 @media screen and (max-width: 650px) {
   .form{
     width: 70%;
-    margin: auto;
+    margin: 50px auto;
   }
 }
 @media screen and (max-width: 400px) {
   .form{
     width: 90%;
-    margin: auto;
+    margin: 30px auto;
   }
-}
-.title{
-  text-align: center;
-}
-.enter{
-  font-size: 26px;
-  margin-left: 100px;
+  .form input{
+    width: 90%;
+  }
 }

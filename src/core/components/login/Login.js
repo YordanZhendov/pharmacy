@@ -45,8 +45,8 @@ export default function Login(){
         <main>
             <form onSubmit={onRegisterSubmit} className={styles.form}>
                 <div className={styles.imgcontainer} >
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOzyRxuCacyG9vtH_SV_r6u8LcuEiLvGx0N8SZrMyA-71lufvU8vTFt973kJ_wdqIvACE&usqp=CAU" alt="Avatar" className={styles.avatar}/>
-                <span className={styles.enter}> ВХОД </span>
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOzyRxuCacyG9vtH_SV_r6u8LcuEiLvGx0N8SZrMyA-71lufvU8vTFt973kJ_wdqIvACE&usqp=CAU" alt="Avatar" className={styles.avatar}/>
+                    <span className={styles.enter}> ВХОД </span>
                 </div>
                 <div className={styles.container}>
             

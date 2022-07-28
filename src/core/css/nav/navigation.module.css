@@ -71,7 +71,6 @@ a:hover{
 
     header {
       display: block;
-      margin-bottom: 100px;
     }
   
     nav ul{
@@ -80,4 +79,20 @@ a:hover{
     header div{
       justify-content: center;
     }
-};
+}
+@media only screen and (max-width: 989px) {
+
+    header {
+      display: block;
+    }
+  
+    nav .nav_buttons{
+      flex-direction: column;
+    }
+    nav ul li{
+        margin-bottom: 10px;
+    }
+    header div{
+      justify-content: center;
+    }
+}

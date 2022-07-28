@@ -140,3 +140,12 @@
 .name__product__ecart{
     text-transform: uppercase;
 }
+
+@media only screen and (max-width: 1200px) {
+    .ecart__container__info{
+        flex-direction: column;
+    }
+    .ecart__container__price{
+        width: unset;
+    }
+}

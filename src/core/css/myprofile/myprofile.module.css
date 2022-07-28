@@ -195,6 +195,7 @@
   .pharmacy__add__container .my__pharmacies p {
     font-size: 56px;
     padding: 30px;
+    text-align: center;
 
 }
 .pharmacy__add__container .my__pharmacies li{
@@ -204,7 +205,6 @@
     border-radius: 25px;
     width: 100%;
     margin: 20px;
-    list-style: circle;
 }
 
 .buttonDelete{
@@ -223,6 +223,7 @@
 }
 .pharmacy__container_short div{
     margin-right: 15px;
+    font-size: 36px;
 }
 .add__product__btn{
     border: none;
@@ -239,4 +240,57 @@
     font-size: 42px;
     padding: 100px;
     color: #f1a09d;
+}
+
+@media only screen and (max-width: 1200px) {
+    .pharmacy__add__container{
+        flex-direction: column;
+        padding: unset;
+    }
+    .pharmacy__add__container .my__pharmacies{
+        width: 60%;
+    }
+    .pharmacy__add__container .my__pharmacies p {
+        font-size: 36px;
+        text-align: center;
+    
+    }
+}
+
+
+@media only screen and (max-width: 989px) {
+    .creator_info_container{
+        width: unset;
+    }
+    .info_container{
+        width: unset;
+    }
+}
+@media only screen and (max-width: 750px) {
+    .creator_container{
+        flex-direction: column;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .pharmacy__container_short div{
+        font-size: 26px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .pharmacy__add__container .my__pharmacies{
+        width: 45%;
+    }
+    .pharmacy__add__container .my__pharmacies p {
+        font-size: 16px;
+        text-align: center;
+    
+    }
+}
+@media only screen and (max-width: 1000px) {
+    .pharmacy__container_short{
+        flex-direction: column;
+    }
+    .pharmacy__add__container .form__container form .input{
+        width: 70%;
+    }
 }

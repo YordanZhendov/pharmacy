@@ -11,7 +11,7 @@ footer{
     padding-top: 75px;
 }
 footer a{
-    color: rgb(190, 186, 186);
+    color: #14052a;
 }
 footer ul{
     line-height: 45px;
@@ -25,3 +25,39 @@ footer .copy{
     margin-left: 20px;
     border:none;
 }
+
+@media only screen and (max-width: 900px) {
+
+   footer{
+    flex-direction: column;
+    text-align: center;
+    padding: 120px 50px 0px 50px;
+   }
+
+   footer ul{
+    width: 50%;
+    margin: 25px auto;
+   }
+}
+@media only screen and (max-width: 700px) {
+
+    footer{
+     flex-direction: column;
+     text-align: center;
+     padding: 120px 20px 0px 20px;
+     margin-top: 35px;
+
+    }
+ 
+    footer ul{
+     width: 75%;
+     margin: 25px auto;
+    }
+ }
+ @media only screen and (max-width: 475px) {
+    
+    footer ul{
+     width: 100%;
+     margin: 25px auto;
+    }
+ }

@@ -50,33 +50,42 @@ p{
     font-size: 16px;
     margin-bottom: 50px;
 }
-
-@media screen and (max-width: 850px) {
-  img.avatar {
-    width: 18%;
-  }
+.title{
+  text-align: center;
 }
-@media screen and (max-width: 550px) {
-  img.avatar {
-    width: 20%;
-  }
+.enter{
+  font-size: 26px;
+  font-weight: bold;
 }
 .form{
   width: 40%;
   margin: 100px auto;
 }
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 850px) {
+  img.avatar {
+    width: 28%;
+  }
   .form{
     width: 70%;
-    margin: auto;
+    margin: 50px auto;
   }
 }
+@media screen and (max-width: 550px) {
+  img.avatar {
+    width: 24%;
+  }
+  .form{
+    width: 60%;
+    margin: 50px auto;
+  }
+}
+
 @media screen and (max-width: 400px) {
   .form{
     width: 90%;
-    margin: auto;
+    margin: 50px auto;
   }
-}
-.title{
-  text-align: center;
+  .form input{
+    width: 90%;
+  }
 }

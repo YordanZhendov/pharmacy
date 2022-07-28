@@ -194,10 +194,10 @@ function Products() {
             <section className={styles.titles}>
               {pharmacyOwnerId !== user.id ? <>
                 <span>Продукт</span>  
-                <span>Количество</span>  
-                <span>Общо</span>  
+                <span className={styles.title__table}>Цена</span>  
+                <span className={styles.title__table}>Количество</span>  
               </> : null}
-                <span>Цена</span>  
+                <span className={styles.title__table}>Обща цена</span>  
             </section> : null}
             <div id="update__form__container" className={styles.update__container}>
               <form className={styles.from__update}>
@@ -236,8 +236,9 @@ function Products() {
                     <div className={styles["quantity__control--btn"]} onClick={(e) => addQuantity(product.price,product.id,e)}>+</div>
                   </div>
                   <div id="total" className={styles.total}>
-                    00.00 лв
+                   00.00 лв
                   </div>
+                  <span className={styles.total__sum__small__window}> общо </span> 
                 </> : null}
                 
                 {user.id === product.pharmacy.userApp.id 

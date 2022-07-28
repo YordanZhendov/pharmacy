@@ -144,7 +144,6 @@ function Myprofile() {
               </form>
           </section>
           <section className={styles.my__pharmacies}>
-              
               {myPharmacies.length === 0
               ? <div className={styles.noProducts}>няма създадени аптеки</div> : <p>Моите Аптеки</p>}
               <ul>
