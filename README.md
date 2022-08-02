@@ -74,7 +74,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 ###  To See how it works please the following steps must be made.
 
 1. http://pharmacy-fe.herokuapp.com/ enter the welcome page.
-2.Register an account.
-3.Add Pharmacy.
-4.Add Product.
+2. Register an account.
+3. Add Pharmacy.
+4. Add Product.
 5. To test the buy option it needs another account.
