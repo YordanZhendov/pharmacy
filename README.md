@@ -71,3 +71,10 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+###  To See how it works please the following steps must be made.
+
+1. http://pharmacy-fe.herokuapp.com/ enter the welcome page.
+2.Register an account.
+3.Add Pharmacy.
+4.Add Product.
+5. To test the buy option it needs another account.
